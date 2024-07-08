@@ -1,0 +1,37 @@
+<!--fichier enreLivre.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enregistrement de livres</title>
+    <link rel="stylesheet" href="Styles/enreLivre.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Enregistrement de livre</h2>
+      <form action="enreLivre.php" method="post">
+        <label for="isbn">ISBN :</label>
+        <input type="text" id="isbn" name="isbn" required />
+
+        <label for="auteur">Auteur :</label>
+        <input type="text" id="auteur" name="auteur" required />
+
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre" required />
+
+        <label for="quantite">Quantite :</label>
+        <input type="number" id="quantite" name="quantite" required />
+
+        <label for="prix">Pu :</label>
+        <input type="number" id="prix" name="prix" required />
+
+        <div class="d">
+          <input type="reset" value="Annuler" />
+          <input type="submit" value="Enregistrer" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
