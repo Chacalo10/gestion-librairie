@@ -1,86 +1,84 @@
+/* member_only.css */
+
 :root {
-    --default : #f4f4f4;
-    --primary : #4cae4c;
+    --default: #f4f4f4;
+    --primary: #4cae4c;
 }
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     background-color: var(--default);
     margin-bottom: 100px;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .cont {
     border: 1px solid #ccc;
-    /*position: relative;*/
-    background: url('../images/1.bmp');
+    position: relative;
+    background: url("../images/1.bmp");
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     color: white;
-    
 }
+
 .cont-header {
     background-color: var(--primary);
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    /*filter: brightness(0.1);*/
 }
 
-.cont-header h1, p {
+h1,
+p {
     cursor: default;
+    text-align: center;
 }
 
 .cont-form {
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: brightness(20%);
-    position: relative;
-    margin-bottom: 100px;
-    
+    backdrop-filter: brightness(40%);
 }
-.cont-form input[type="submit"] {
 
-background-color: #4cae4c;
-border-radius: 20px;
-color: #fff;
-line-height: 40px; 
-border: none;
-cursor: pointer;
-margin-bottom: 50px;
-margin-top: 20px;
-margin-left: 30px;
-font-size: 15px;
-text-align: center;
-transition: transform 0.2s;
+.cont-form input[type="submit"] {
+    background-color: #4cae4c;
+    border-radius: 20px;
+    color: #fff;
+    line-height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 15px;
+    text-align: center;
+    transition: transform 0.2s;
 }
-input {
-width: 350px;
-height: 40px;
-}
+
+/*input {
+    width: 350px;
+    height: 40px;
+}*/
+
 .cont-form input[type="submit"]:hover {
-background-color: #0c810c;
-transform: scale(1.05);
+    background-color: #0c810c;
+    transform: scale(1.05);
 }
 
 a {
     text-decoration: none;
     color: white;
-    font-family: 'Arial', sans-serif; 
-    margin: 50px;  
-}
-
-p {
-    text-align: center;
+    font-family: "Arial", sans-serif;
+    margin: 50px;
 }
 
 #aj {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     display: inline-block;
     background-color: #4cae4c;
     margin-top: 10px;
@@ -90,12 +88,13 @@ p {
     border-radius: 40px;
     cursor: pointer;
     text-align: center;
-    font-size: 13px;  
+    font-size: 13px;
     transition: transform 0.1s;
 }
+
 #aj:hover {
     background-color: #0c810c;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .link {
@@ -104,5 +103,6 @@ p {
 }
 
 .para {
-    margin-top: 40px;
+    margin: 0;
+    padding: 50px;
 }

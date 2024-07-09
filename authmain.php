@@ -54,7 +54,7 @@
             <div class="login-form">
                 <?php
                     if (isset($_SESSION['valid_user'])) {
-                        echo '<br>';
+                        
                         echo '<div class="connect-user">';
                         echo '<p>Vous êtes connecté(e) en tant que : ' . $_SESSION['valid_user'] . '</p>';
                         echo '</div>';

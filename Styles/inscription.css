@@ -34,9 +34,9 @@ body {
   padding: 20px 0;
 }
 
-.container form {
-  padding: 20px;
-  backdrop-filter: brightness(10%);
+.container .container-form {
+  padding: 50px 20px 20px 20px;
+  backdrop-filter: brightness(40%);
 }
 
 .container-form label {
@@ -97,4 +97,5 @@ a:hover {
 .d {
   display: flex;
   justify-content: space-around;
+  margin-top: 100px;
 }
