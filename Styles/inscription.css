@@ -1,6 +1,8 @@
 :root {
   --primary: #4cae4c;
   --primaryh: #0c810c;
+  --second: #ff0000;
+  --secondh: #750000;
 }
 
 body {
@@ -25,8 +27,6 @@ body {
   color: white;
 }
 
-
-
 .container-header {
   background-color: var(--primary);
   color: #fff;
@@ -47,18 +47,16 @@ body {
   padding-left: 10px;
 }
 
-
 input[type="text"],
 input[type="password"] {
-width: 90%;
- line-height: 40px;
- border-radius: 20px;
- padding: 0 20px;
- margin-bottom: 20px;
- border: 1px solid #ccc;
- color: white;
- background: rgba(255, 255, 255, 0.3);
-  
+  width: 90%;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 input[type="submit"] {
@@ -69,29 +67,29 @@ input[type="submit"] {
   color: white;
   cursor: pointer;
   border-radius: 20px;
-  
-  
+  transition: transform 0.2s;
 }
 
 input[type="submit"]:hover {
-  background-color: var(--primaryh)
- 
+  background-color: var(--primaryh);
+  transform: scale(1.1);
 }
 
 a {
-  
   text-decoration: none;
   padding: 11px 60px;
   border: none;
-  background-color: #f36262;
+  background-color: var(--second);
   color: white;
   cursor: pointer;
   border-radius: 20px;
   font-size: 15px;
+  transition: transform 0.2s;
 }
 
 a:hover {
-  background-color: #b80000;
+  background-color: var(--secondh);
+  transform: scale(1.1);
 }
 
 .d {

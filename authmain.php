@@ -58,7 +58,7 @@
                         echo '<div class="connect-user">';
                         echo '<p>Vous êtes connecté(e) en tant que : ' . $_SESSION['valid_user'] . '</p>';
                         echo '</div>';
-                        echo '<div class = "l"><a href="logout.php" class = "d">Fermer votre session</a></div><br />';
+                        echo '<div class = "l"><a href="logout.php">Fermer votre session</a></div><br />';
                     } elseif(isset($_SESSION['valid_admin'])) {
                         echo '<br>';
                         echo '<div class="connect-admin">';
