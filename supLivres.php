@@ -1,4 +1,4 @@
-<!--fichier supLivre.php-->
+<!--fichier supLivres.php-->
 
 <?php
 include("librairie/variables.inc.php");
