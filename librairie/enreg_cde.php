@@ -1,8 +1,8 @@
 <?php
     include("variables.inc.php");
 
-    if(empty($_REQUEST['nom'])||empty($_REQUEST['adresse']))
-        die("erreur : il y a des champs vides !");
+    if(empty($_REQUEST['adresse']))
+        die("veillez entrer l'address");
 
 
     $db = new mysqli($bdserver, $bdlogin, $bdpwd, $bd);

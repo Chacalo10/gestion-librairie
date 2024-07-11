@@ -8,7 +8,6 @@
 body {
     font-family: "Arial", sans-serif;
     background-color: var(--default);
-    margin-bottom: 100px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -43,27 +42,24 @@ p {
 
 .cont-form {
     backdrop-filter: brightness(40%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cont-form input[type="submit"] {
+    
     background-color: #4cae4c;
     border-radius: 20px;
-    color: #fff;
-    line-height: 40px;
     border: none;
     cursor: pointer;
-    margin-bottom: 50px;
-    margin-top: 20px;
-    margin-left: 30px;
-    font-size: 15px;
-    text-align: center;
+    font-size: 13px;
     transition: transform 0.2s;
+    color: #f4f4f4;
+    padding: 10px;
+    width: 60%;
 }
-
-/*input {
-    width: 350px;
-    height: 40px;
-}*/
 
 .cont-form input[type="submit"]:hover {
     background-color: #0c810c;
@@ -82,7 +78,7 @@ a {
     display: inline-block;
     background-color: #4cae4c;
     margin-top: 10px;
-    width: 390px;
+    width: 70%;
     padding: 10px;
     border: none;
     border-radius: 40px;
@@ -99,10 +95,10 @@ a {
 
 .link {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-.para {
+.para, p {
     margin: 0;
     padding: 50px;
 }

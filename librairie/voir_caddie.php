@@ -40,26 +40,22 @@ echo "<div class='total'>Montant + Frais (1000) : $montant </div>";
     <input type="hidden" name="listesproduits" value="<?php echo $listeproduits; ?>" />
     <div class="form-group">
         <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" value=" <?php echo isset($_SESSION['valid_user']) ? $_SESSION['valid_user'] : ''; ?>"/> 
+        <input type="text" id="nom" name="nom" value=" <?php echo isset($_SESSION['valid_user']) ? $_SESSION['valid_user'] : ''; ?>" disabled/> 
     </div>
     <div class="form-group">
-        <label for="adresse">Adresse :</label>
-        <input type="text" id="adresse" name="adresse" required placeholder="Entrez votre adresse" />
+        <label for="adresse">Adresse de livraison :</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Entrez votre adresse" required />
     </div>
     <div class="form-group">
         <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required placeholder="Entrez votre email" />
+        <input type="email" id="email" name="email"  placeholder="Entrez votre email (facultatif)">
     </div>
     <div class="form-group">
         <label for="telephone">Téléphone :</label>
-        <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" />
+        <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone (facultatif)"/>
     </div>
 
     <a href="boutique.php">Annuler la commande</a>
     <input type="submit" value="Enregistrer la commande" />
 </form>
 </div>
-
-<style>
-    
-</style>
