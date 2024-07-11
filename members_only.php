@@ -27,7 +27,7 @@
             
                 <form action="librairie/boutique.php" method="post">
                     <p>
-                        <?php echo 'Vous êtes connecté(e) en tant que ' . $_SESSION['valid_user']; ?>
+                        <?php echo 'Bienvenue ' . $_SESSION['valid_user'] . ', envie de plonger dans la litterature ?'; ?>
                     </p>
                     <input type="submit" value="Voir les livres" class="lien">
                     <?php

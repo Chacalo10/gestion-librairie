@@ -15,18 +15,25 @@ if (!isset($_REQUEST['id'])) $id = 1;
     <meta charset="UTF-8">
     <title>Librairie - catalogue</title>
     <link rel="stylesheet" href="styles/boutique.css">
+    <script>
+        function chek(){
+            <?php
+                if (isset($_COOKIE['monpanier'])) {
+                    setcookie('monpanier', '', time() - 3600, '/');
+                }
+            ?>
+        }
+    </script>
 </head>
-<body>
-    <div class='titre'>
+<body onload=chek()>
+    <div class='titre' >
         Boutique <i> Librairie </i>
     </div>
     <table class='catalogue'>
         <tr>
             <td class='liste'>
                 <div class='tdTitre'>Nos livres</div>
-                <?php
-
-                
+                <?php               
                 $db = new mysqli($bdserver, $bdlogin, $bdpwd, $bd);
                 if ($db->connect_error) {
                     die("Connexion échouée : " . $db->connect_error);
@@ -34,10 +41,12 @@ if (!isset($_REQUEST['id'])) $id = 1;
                 
                 $sql = "SELECT * FROM $livres";
                 $resultat = $db->query($sql);
+                echo "<ol>";
                 while ($livre = $resultat->fetch_assoc()) {
                     $activeClass = ($livre['codeLivre'] == $id) ? 'livre-actif' : '';
-                    echo "<a href='" . $_SERVER['PHP_SELF'] . "?id=" . $livre['codeLivre'] . "' class='$activeClass'>" . $livre['titre'] . "</a><br/>";
+                    echo "<a href='" . $_SERVER['PHP_SELF'] . "?id=" . $livre['codeLivre'] . "' class='$activeClass'><li> " . $livre['titre'] . "</li></a><br/>";
                 }
+                echo "</ol>";
                 ?>
             </td>
             <td class='detail'>
@@ -72,7 +81,8 @@ if (!isset($_REQUEST['id'])) $id = 1;
                         echo "<input type='submit' value='voir la commande'/></form>";
                         echo "</div>";
                         echo "</div>";
-                        var_dump($_COOKIE);
+
+                        print("id des livres dans le panier : {".$_COOKIE['monpanier']."}");
                     }
                     $db->close();
                     ?>
