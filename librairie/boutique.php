@@ -3,7 +3,6 @@
 
 include("variables.inc.php");
 
-//unset($_COOKIE['monpanier']);
 $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : 1;
 
 if (!isset($_REQUEST['id'])) $id = 1;
@@ -65,14 +64,15 @@ if (!isset($_REQUEST['id'])) $id = 1;
                     if (isset($_COOKIE['monpanier'])) {
                         echo "<div class='panier'>";
                         $tab = explode(",", $_COOKIE['monpanier']);
-                        $nblivres = sizeof($tab) - 1;
+                        $nblivres = sizeof($tab);
 
                         echo "Dans votre panier : " . $nblivres . " livre(s)<br/>";
-                        echo "<form action='voir_caddie.php' method='post'>";                       
+                        echo "<form action='voir_caddie.php' method='post'>";
                         echo "<div id = 'cmd' >";
-                        echo "<input type='submit' value='voir la commande'/></form>";                      
+                        echo "<input type='submit' value='voir la commande'/></form>";
                         echo "</div>";
                         echo "</div>";
+                        var_dump($_COOKIE);
                     }
                     $db->close();
                     ?>

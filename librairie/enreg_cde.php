@@ -1,3 +1,5 @@
+<!-- enreg_cde.php -->
+
 <?php
     include("variables.inc.php");
 
@@ -32,18 +34,19 @@
     $sql = "INSERT INTO $cdes (produits, montantcde, nomPrenomCli, adressecli, dateCde) VALUES ('$listeproduits','$montant','".$_REQUEST['nom']."','".$_REQUEST['adresse']."','$date')";
     $db->query($sql);
 
- 
-setcookie("monprofil","nom = ".$_REQUEST['nom'].";;adresse = ".$_REQUEST['adresse'], time() + 604800);
+    setcookie("monprofil","nom = ".$_REQUEST['nom'].";;adresse = ".$_REQUEST['adresse'], time() + 604800);
 
-setcookie("monpanier","",time()-3600);
- $db->close();
+    setcookie("monpanier","",time()-3600);
+    $db->close();
 
- 
- header("Location: $url/boutique.php");
+    sleep(5);
+    header("Location: $url/boutique.php");
 
     echo '<pre>';
     print_r($listeproduits);
     echo '</pre>';
+
+    echo "commande effectue";
  
 
 ?>
