@@ -16,11 +16,11 @@ if (isset($_SESSION['valid_admin'])) {
     session_destroy();
 }
 ?>
+<!DOCTYPE html>
 <html>
-
 <head>
     <title>Deconection</title>
-    <link rel="stylesheet" href="styles/logout.css">
+    <link rel="stylesheet" href="Styles/logout.css">
 </head>
 
 <body>
@@ -28,23 +28,23 @@ if (isset($_SESSION['valid_admin'])) {
         <div class="cont-header">
             <h1>Fermeture de la SESSION</h1>
         </div>
-        <?php
-        if (!empty($old_user)) {
-            echo ' <p><b> session fermée.<br/> </b><p/>';
-        } elseif(!empty($old_admin)) {
-            echo ' <p><b> session fermée.<br/> </b><p/>';
-        } else {
-            // si l’utilisateur n’avait pas pu ouvrir une session mais qui est parvenu à cette page
-            echo '<p>Pas besoin de fermer la session car elle n’a pas été ouverte pour vous.<p/>';
-        }
-        ?>
-
+        <div class="cont-main">
+            <?php
+            if (!empty($old_user)) {
+                echo ' <p><b> session fermée. </b></p>';
+            } elseif(!empty($old_admin)) {
+                echo ' <p><b> session fermée. </b></p>';
+            } else {
+                // si l’utilisateur n’avait pas pu ouvrir une session mais qui est parvenu à cette page
+                echo '<p>Pas besoin de fermer la session car elle n’a pas été ouverte pour vous.</p>';
+            }
+            ?>
+            
+            <div class="link">
+                <a href="authmain.php">Page principale</a>
+            </div>
         
-        <div class="link">
-            <a href="authmain.php">Page principale</a>
         </div>
-        
-
     </div>
 </body>
 

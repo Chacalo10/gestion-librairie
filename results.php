@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliothèque - catalogue des livres</title>
-    <link rel="stylesheet" href="styles/results.css">
-    <link rel="stylesheet" href="styles/css/all.css">
+    <link rel="stylesheet" href="Styles/results.css">
+    <link rel="stylesheet" href="Styles/css/all.css">
 </head>
 
 <body>

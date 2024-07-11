@@ -3,6 +3,7 @@
 <?php
     session_start();
 
+
     //permet d'integrer les variables de connexion à la base de donnée qui se trouve dans le fichier variables.php
     include("librairie/variables.inc.php");
     
@@ -41,7 +42,9 @@
             $_SESSION['valid_admin'] = $userid;
         }
     }
-?>
+    $classeins = isset($_SESSION['valid_user']) || isset($_SESSION['valid_admin']) ? 'dis' : '';
+    $classei = isset($_SESSION['valid_admin']) ? 'dis' : '';
+    ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,13 +62,14 @@
                         echo '<p>Vous êtes connecté(e) en tant que : ' . $_SESSION['valid_user'] . '</p>';
                         echo '</div>';
                         echo '<div class = "l"><a href="logout.php">Fermer votre session</a></div><br />';
+
                     } elseif(isset($_SESSION['valid_admin'])) {
                         echo '<br>';
                         echo '<div class="connect-admin">';
                         echo '<p>Vous êtes connecté(e) en tant que : ' . $_SESSION['valid_admin'] . '<br /></p>';
                         echo '</div>';
-                        echo '<div class = "li"><a href="rechLivres.html" class="d2" >Section administrateur</a>';
-                        echo '<a href="logout.php" class = "d1">Fermer votre session</a></div>';
+                        echo '<div class = "li"><a href="rechLivres.html" class="d1" >Section administrateur</a>';
+                        echo '<a href="logout.php" class = "d2">Fermer votre session</a></div>';
                         
                     } else {
 
@@ -86,8 +90,8 @@
                 ?>
                 <br>
                 <div class="bottom">
-                    <a href="members_only.php" class="srm">Section réservée aux membres</a>
-                    <a href="inscription.html" class="srm" >S'inscrire</a>
+                    <?php echo "<a href='members_only.php' class='srm $classei '>Section réservée aux membres</a>";
+                        echo "<a href='inscription.html' class='srm $classeins ' id='insc'>Sinscrire</a> " ?>
                 </div>
                     
                 

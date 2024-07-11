@@ -97,3 +97,7 @@ a:hover {
   justify-content: space-around;
   margin-top: 100px;
 }
+
+h2 {
+  cursor: default;
+}
