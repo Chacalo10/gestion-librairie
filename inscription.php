@@ -1,4 +1,4 @@
-<!-- fichier inscription.php -->
+<!-- fichier inscription.php 100%-->
 <?php
     include("librairie/variables.inc.php");
     
@@ -19,5 +19,5 @@
     $stmt->close();
     $base->close();
     header("location: authmain.php ");
-  
+
 ?>

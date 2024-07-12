@@ -1,8 +1,7 @@
-<!-- fichier authmain.php -->
+<!-- fichier authmain.php  90%-->
 
 <?php
     session_start();
-
 
     //permet d'integrer les variables de connexion à la base de donnée qui se trouve dans le fichier variables.php
     include("librairie/variables.inc.php");

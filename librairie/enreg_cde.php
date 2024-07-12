@@ -39,14 +39,26 @@
     setcookie("monpanier","",time()-3600);
     $db->close();
 
-    sleep(5);
+    /*echo '<meta http-equiv="refresh" content="3;url=boutique.php">';
+    /*sleep(5);
     header("Location: $url/boutique.php");
 
     echo '<pre>';
     print_r($listeproduits);
     echo '</pre>';
 
-    echo "commande effectue";
+    echo "commande effectue";*/
  
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    yo
+</body>
+</html>

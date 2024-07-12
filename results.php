@@ -1,4 +1,4 @@
-<!--fichier results.php-->
+<!-- fichier results.php 50%-->
 
 <!DOCTYPE html>
 <html lang="fr">

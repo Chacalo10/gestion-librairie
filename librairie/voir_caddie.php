@@ -34,7 +34,17 @@ $listeproduits = ltrim($listeproduits, ',');
 $montant += 1000; // frais de livraison
 echo "<div class='total'>Montant + Frais (1000) : $montant </div>";
 ?>
+
 <link rel="stylesheet" href="styles/voir_caddie.css">
+<script>
+        function chek(){
+            <?php
+                if (isset($_COOKIE['monpanier'])) {
+                    setcookie('monpanier', '', time() - 3600, '/');
+                }
+            ?>
+        }
+</script>
 <form action="enreg_cde.php" method="post">
     <input type="hidden" name="montant" value="<?php echo $montant; ?>" />
     <input type="hidden" name="listesproduits" value="<?php echo $listeproduits; ?>" />

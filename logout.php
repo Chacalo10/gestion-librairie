@@ -1,4 +1,4 @@
-<!-- fichier logout.php -->
+<!-- fichier logout.php 100%-->
 <?php
 session_start();
 if (isset($_SESSION['valid_user'])) { 

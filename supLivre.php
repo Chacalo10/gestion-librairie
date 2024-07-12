@@ -1,4 +1,4 @@
-<!--fichier supLivre.php-->
+<!-- fichier supLivre.php 50%-->
 
 <!DOCTYPE html>
 <html lang="en">

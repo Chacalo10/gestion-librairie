@@ -7,11 +7,15 @@
 </head>
 <body>
     <?php
+    session_start();
     echo "yo";
     echo "<pre>";
     print_r ($_SESSION);
     echo "</pre>";
-    echo "ya"
+    echo "ya<br>";
+
+    $cra = 'to,to';
+    echo $cra[2];
     ?>
 </body>
 </html>

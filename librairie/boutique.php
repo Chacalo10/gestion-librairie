@@ -15,15 +15,7 @@ if (!isset($_REQUEST['id'])) $id = 1;
     <meta charset="UTF-8">
     <title>Librairie - catalogue</title>
     <link rel="stylesheet" href="styles/boutique.css">
-    <script>
-        function chek(){
-            <?php
-                if (isset($_COOKIE['monpanier'])) {
-                    setcookie('monpanier', '', time() - 3600, '/');
-                }
-            ?>
-        }
-    </script>
+    
 </head>
 <body onload=chek()>
     <div class='titre' >
@@ -79,10 +71,15 @@ if (!isset($_REQUEST['id'])) $id = 1;
                         echo "<form action='voir_caddie.php' method='post'>";
                         echo "<div id = 'cmd' >";
                         echo "<input type='submit' value='voir la commande'/></form>";
+                        echo "<a href='enlev_caddie.php'>enlever un element</a>";
                         echo "</div>";
                         echo "</div>";
 
                         print("id des livres dans le panier : {".$_COOKIE['monpanier']."}");
+                        echo "<pre>";
+                        print_r ($_COOKIE);
+                        echo "</pre>";
+                        echo gettype($_COOKIE['monpanier']);
                     }
                     $db->close();
                     ?>

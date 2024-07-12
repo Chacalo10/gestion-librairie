@@ -1,4 +1,4 @@
-<!--fichier supLivres.php-->
+<!-- fichier supLivres.php 10%-->
 
 <?php
 include("librairie/variables.inc.php");
@@ -17,7 +17,6 @@ $codeLivre = $_GET['codelivre'];
     <title>Suppression de livre</title>
 </head>
 <body>
-         <h1>yo</h1>
-    
+    <h1>yo</h1>
 </body>
 </html>

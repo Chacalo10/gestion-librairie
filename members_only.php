@@ -1,4 +1,4 @@
-<!-- fichier member_only.php -->
+<!-- fichier member_only.php 100%-->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,7 +21,6 @@
                 echo '';
 
 // vérification de la variable de session
-
                 if (isset($_SESSION['valid_user'])) {
             ?>
             
