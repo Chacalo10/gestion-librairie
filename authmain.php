@@ -90,7 +90,7 @@
                 <br>
                 <div class="bottom">
                     <?php echo "<a href='members_only.php' class='srm $classei '>Section réservée aux membres</a>";
-                        echo "<a href='inscription.html' class='srm $classeins ' id='insc'>Sinscrire</a> " ?>
+                        echo "<a href='insc_stanby.html' class='srm $classeins ' id='insc'>Sinscrire</a> " ?>
                 </div>
                     
                 
