@@ -92,7 +92,7 @@
         echo '</div>';
     }
 
-    echo "<a href='rechLivres.html' class='acceuil'>Acceuil</a>";
+    echo "<a href='admin_only.html' class='acceuil'>Acceuil</a>";
     ?>
     
 </body>

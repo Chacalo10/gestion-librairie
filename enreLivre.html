@@ -1,6 +1,6 @@
 <!-- fichier enreLivre.html 10%-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
       <h2>Enregistrement de livre</h2>
       <form action="enreLivre.php" method="post">
         <label for="isbn">ISBN :</label>
-        <input type="text" id="isbn" name="isbn" required />
+        <input type="text" id="isbn" name="isbn" size="13" required />
 
         <label for="auteur">Auteur :</label>
         <input type="text" id="auteur" name="auteur" required />
@@ -28,7 +28,7 @@
         <input type="number" id="prix" name="prix" required />
 
         <div class="d">
-          <input type="reset" value="Annuler" />
+          <a href="admin_only.html">Annuler</a>
           <input type="submit" value="Enregistrer" />
         </div>
       </form>

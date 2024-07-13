@@ -45,7 +45,7 @@
     $classei = isset($_SESSION['valid_admin']) ? 'dis' : '';
     ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>Page d'accès</title>
         <link rel="stylesheet" href="Styles/authmain.css">
@@ -67,7 +67,7 @@
                         echo '<div class="connect-admin">';
                         echo '<p>Vous êtes connecté(e) en tant que : ' . $_SESSION['valid_admin'] . '<br /></p>';
                         echo '</div>';
-                        echo '<div class = "li"><a href="rechLivres.html" class="d1" >Section administrateur</a>';
+                        echo '<div class = "li"><a href="admin_only.html" class="d1" >Section administrateur</a>';
                         echo '<a href="logout.php" class = "d2">Fermer votre session</a></div>';
                         
                     } else {

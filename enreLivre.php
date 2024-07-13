@@ -66,7 +66,7 @@ $stmt->close();
 // Fermer la connexion
 $conn->close();
     
-redirection("rechLivres.html");
+redirection("admin_only.html");
     ?>
 </body>
 </html>

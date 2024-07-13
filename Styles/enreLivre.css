@@ -1,13 +1,25 @@
+:root {
+    --secondary : #ff3a3a;
+    --secondaryh : #c70505;
+
+    --primary : #5D6975;
+    --primaryh : #424E60;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: 'Arial', sans-serif;
+
     padding: 20px;
-    background-color: #d6d6d6;
+    background-color: #fcffd5;
+    color: var(--primary);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     width: 50%;
-    margin: auto;
     background: #fff;
     padding: 20px;
     box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
@@ -24,31 +36,47 @@ input[type="number"] {
 }
 
 
-input[type="reset"] {
-    width: 49.5%;
-    padding: 10px;
-    border: none;
-    background-color: #5cb85c;
-    color: white;
+input[type="submit"], a {
+    padding: 10px 0px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-size: 13px;
     cursor: pointer;
-    border-radius: 10px;
+    border: 1px solid var(--primaryh);
+    color: white;
+    width: 200px;
+}
+
+a {
+
+    background-color: var(--secondary);
+    text-decoration: none;
+    text-align: center;
+
+}
+
+a:hover {
+    background: var(--secondaryh);
 }
 
 input[type="submit"] {
-    width: 49.5%;
-    padding: 10px;
-    border: none;
-    background-color: #5cb85c;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
+    
+    
+    background-color: var(--primary);
+
+
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #348034;
+input[type="submit"]:hover {
+    background-color: var(--primaryh);
 }
 
 .d {
-    text-align: right;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+h2 {
+    cursor: default;
 }
