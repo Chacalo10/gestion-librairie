@@ -104,5 +104,5 @@ a:hover {
 }
 
 .disablede {
-    background: #ff0000;
+    display: none;
 }

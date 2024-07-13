@@ -1,5 +1,6 @@
 <!-- fichier insc_stanby.html 40%-->
-<!DOCTYPE html>
+
+<!--<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -25,6 +26,60 @@
         function goto() {
             
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const userRadio = document.getElementById("user");
+    const adminRadio = document.getElementById("admin");
+    const inscriptionBtn = document.getElementById("inscription-btn");
+    const pwInput = document.getElementById("pw");
+
+    // Écoutez les changements d'état des entrées radio
+    userRadio.addEventListener("change", updateButtonState);
+    adminRadio.addEventListener("change", updateButtonState);
+
+    function updateButtonState() {
+        if (userRadio.checked) {
+            // Activer le bouton pour l'utilisateur
+            inscriptionBtn.onclick = function () {
+                window.location.href = "inscription.html";
+            };
+        } else if (adminRadio.checked) {
+            // Activer le bouton pour l'administrateur
+            inscriptionBtn.onclick = function () {
+                if (pwInput.value == ''){
+                    alert('entrer le mot de pass');
+                }else if (pwInput.value != 'admin'){
+                    alert('mot de pass incorrect');
+                }else{
+                    window.location.href = "inscription_admin.html";
+                }
+                
+            };
+        }
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const userRadio = document.getElementById("user");
+    const adminRadio = document.getElementById("admin");
+    const pwInput = document.getElementById("pw");
+
+    // Écoutez les changements d'état des entrées radio
+    userRadio.addEventListener("change", updateInputVisibility);
+    adminRadio.addEventListener("change", updateInputVisibility);
+
+    function updateInputVisibility() {
+        if (userRadio.checked) {
+            // Masquer la zone de texte pour l'utilisateur
+            pwInput.classList.add("disablede");
+        } else if (adminRadio.checked) {
+            // Afficher la zone de texte pour l'administrateur
+            pwInput.classList.remove("disablede");
+        }
+    }
+});
+
     </script>
 </head>
 
@@ -41,10 +96,99 @@
         </div>
         <div class="bottom">
             <a href="authmain.php" class="btn">Annuler</a>
-            <input type="button" value="S'inscrire" class="btn">
+            <input type="button" id="inscription-btn" value="S'inscrire" class="btn">
         </div>
     </div>
 
 </body>
 
+</html>-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attente d'inscription</title>
+    <link rel="stylesheet" href="Styles/insc_stanby.css">
+    <script>
+        /*document.addEventListener("DOMContentLoaded", function () {
+            const userRadio = document.getElementById("user");
+            const adminRadio = document.getElementById("admin");
+            const inscriptionBtn = document.getElementById("inscription-btn");
+            const pwInput = document.getElementById("pw");
+
+            function updateButtonState() {
+                if (userRadio.checked) {
+                    inscriptionBtn.onclick = () => window.location.href = "inscription.html";
+                } else if (adminRadio.checked) {
+                    inscriptionBtn.onclick = () => {
+                        if (pwInput.value === '') {
+                            alert('Entrer le mot de passe');
+                        } else if (pwInput.value !== 'admin') {
+                            alert('Mot de passe incorrect');
+                        } else {
+                            window.location.href = "inscription_admin.html";
+                        }
+                    };
+                }
+            }
+
+            function updateInputVisibility() {
+                pwInput.classList.toggle("disablede", userRadio.checked);
+            }
+
+            userRadio.addEventListener("change", updateButtonState);
+            adminRadio.addEventListener("change", updateButtonState);
+            userRadio.addEventListener("change", updateInputVisibility);
+            adminRadio.addEventListener("change", updateInputVisibility);
+        });*/
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const userRadio = document.getElementById("user");
+            const adminRadio = document.getElementById("admin");
+            const inscriptionBtn = document.getElementById("inscription-btn");
+            const pwInput = document.getElementById("pw");
+
+            function updateButtonState() {
+                if (userRadio.checked) {
+                    pwInput.hidden = true;
+                    inscriptionBtn.onclick = () => window.location.href = "inscription.html";
+                } else if (adminRadio.checked) {
+                    pwInput.hidden = false;
+                    inscriptionBtn.onclick = () => {
+                        if (pwInput.value === '') {
+                            alert('Entrer le mot de passe');
+                        } else if (pwInput.value !== 'admin') {
+                            alert('Mot de passe incorrect');
+                        } else {
+                            window.location.href = "inscription_admin.html";
+                        }
+                    };
+                }
+            }
+
+            userRadio.addEventListener("change", updateButtonState);
+            adminRadio.addEventListener("change", updateButtonState);
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cont">
+        <div class="cont-header">
+            <p>Attente d'inscription</p>
+        </div>
+        <div class="cont-main">
+            <p>Vous voulez vous inscrire en tant que :</p>
+            <label for="user"><input type="radio" name="choix" id="user" value="utilisateur">utilisateur</label>
+            <label for="admin"><input type="radio" name="choix" id="admin" value="administrateur">administrateur</label>
+            <input type="text" id="pw" hidden>
+        </div>
+        <div class="bottom">
+            <a href="authmain.php" class="btn">Annuler</a>
+            <input type="button" id="inscription-btn" value="S'inscrire" class="btn">
+        </div>
+    </div>
+</body>
 </html>
