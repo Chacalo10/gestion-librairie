@@ -47,6 +47,8 @@
 
     setcookie("monpanier","",time()-3600);
     $db->close();
+    setcookie("monpanier","",time()-3600);
+    $db->close();
 
     echo $pop;
     //echo '<meta http-equiv="refresh" content="3;url=boutique.php">';

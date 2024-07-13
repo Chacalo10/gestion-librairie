@@ -66,8 +66,10 @@ if (!isset($_REQUEST['id'])) $id = 1;
                         echo "<div class='panier'>";
                         $tab = explode(",", $_COOKIE['monpanier']);
                         $nblivres = sizeof($tab);
+                        $nblivres = sizeof($tab);
 
                         echo "Dans votre panier : " . $nblivres . " livre(s)<br/>";
+                        echo "<form action='voir_caddie.php' method='post'>";
                         echo "<form action='voir_caddie.php' method='post'>";
                         echo "<div id = 'cmd' >";
                         echo "<a href='enlev_caddie.php'>enlever un element</a>";
