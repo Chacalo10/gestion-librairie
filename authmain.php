@@ -1,4 +1,4 @@
-<!-- fichier authmain.php  90%-->
+<!-- fichier authmain.php  100%-->
 
 <?php
     session_start();

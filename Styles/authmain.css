@@ -83,7 +83,7 @@ span,
     margin-top: 20px;
     margin-left: 20px;
     text-align: center;
-    transition: transform 0.2s;
+    transition: 0.2s;
 }
 
 .login-form input[type="submit"]:active {
@@ -106,7 +106,7 @@ input {
     background-color: var(--primary);
     padding: 10px 50px;
     border-radius: 20px;
-    transition: transform 0.2s;
+    transition: 0.2s;
 }
 
 .l a:hover {

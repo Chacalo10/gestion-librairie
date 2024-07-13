@@ -1,14 +1,14 @@
 :root {
-    --primary : #4cae4c;
+    /*--primary : #4cae4c;
     --primaryh : #0c810c;
     --title : #256d29;
     --button : #007bff;
-    --buttonh : #00356d;
-    /*--primary : #ff3a3a;
+    --buttonh : #00356d;*/
+    --primary : #ff3a3a;
     --primaryh : #c70505;
     --title : #ad0707;
-    --button : #fffb00;
-    --buttonh : #ced100;*/
+    --button : #ccc;
+    --buttonh : #aaa;
 }
 body {
     font-family: Arial, sans-serif;
@@ -73,7 +73,7 @@ body {
 }
 
 .catalogue .detail .panier {
-    background-color: #C8E6C9; 
+    background-color: #ff3a3a77; 
     padding: 10px;
     margin-top: 20px;
 }
@@ -85,17 +85,33 @@ body {
 
 input[type="submit"] {
     background-color: var(--button);
-    color: white;
-    border: none;
+    color: var(--primaryh);
+    border: solid 1px var(--primary);
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 30px;
     cursor: pointer;
     border-radius: 20px;
-    transition: background-color 0.3s;
+    transition:  0.3s;
 }
 
 input[type="submit"]:hover {
+    background-color: var(--buttonh);
+}
+
+#cmd a {
+    background-color: var(--button);
+    color: var(--primaryh);
+    border: solid 1px var(--primary);
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#cmd a:hover {
     background-color: var(--buttonh);
 }
 

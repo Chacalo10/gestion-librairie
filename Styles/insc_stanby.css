@@ -102,3 +102,7 @@ a:hover {
     background: var(--primaryh);
     transform: scale(1.05);
 }
+
+.disablede {
+    background: #ff0000;
+}

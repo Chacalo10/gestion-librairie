@@ -24,7 +24,7 @@ if (isset($_COOKIE['monpanier']) && $_COOKIE['monpanier'] != '') {
             echo $livre['pu'] * $tab[$livre['codeLivre']];
             echo "</td></tr>";
             $montant += $livre['pu'] * $tab[$livre['codeLivre']];
-            $listeproduits .= ',' . $livre['REF'];
+            $listeproduits .= ',' . $livre['titre'];
         }
         echo "</table>";
     }

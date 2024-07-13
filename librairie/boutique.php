@@ -70,8 +70,9 @@ if (!isset($_REQUEST['id'])) $id = 1;
                         echo "Dans votre panier : " . $nblivres . " livre(s)<br/>";
                         echo "<form action='voir_caddie.php' method='post'>";
                         echo "<div id = 'cmd' >";
-                        echo "<input type='submit' value='voir la commande'/></form>";
                         echo "<a href='enlev_caddie.php'>enlever un element</a>";
+                        echo "<input type='submit' value='voir la commande'/></form>";
+                        
                         echo "</div>";
                         echo "</div>";
 
